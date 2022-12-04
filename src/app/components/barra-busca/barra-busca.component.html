@@ -1,0 +1,13 @@
+<div class="container py-5">
+  <div class="row">
+    <label for="busca" class="col-1">Busca</label>
+    <input
+      [(ngModel)]="busca"
+      (ngModelChange)="teclaPressionada.emit(busca)"
+      type="text"
+      name="busca"
+      id="busca"
+      class="col-3"
+    />
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="p-4">
+  <h1 class="mb-3">Cadastro de usuários</h1>
+
+  <form>
+    <div class="row my-1">
+      <div class="col-1">
+        <label for="email" class="form-label">E-mail</label>
+      </div>
+      <div class="col-3">
+        <input
+          #email
+          type="email"
+          name="email"
+          id="email"
+          class="form-control"
+        />
+      </div>
+    </div>
+
+    <div class="row my-1">
+      <div class="col-1">
+        <label for="senha" class="form-label">Senha</label>
+      </div>
+      <div class="col-3">
+        <input
+          #senha
+          type="password"
+          name="senha"
+          id="senha"
+          class="form-control"
+        />
+      </div>
+    </div>
+
+    <button
+      (click)="this.localService.send(email.value, senha.value)"
+      class="btn btn-primary mt-3 mx-1"
+    >
+      Cadastra
+    </button>
+
+    <button
+      type="reset"
+      (click)="this.localService.retrieve()"
+      class="btn btn-primary mt-3 mx-1"
+    >
+      Exibe cadastros
+    </button>
+  </form>
+  <br />
+  <p class="container">Habilite o console para visualizar o funcionamento</p>
+</div>
